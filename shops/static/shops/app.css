@@ -1,0 +1,5 @@
+body { font-family: sans-serif; padding: 1em; }
+#mapid { 
+  width: 800px;
+  height: 600px; 
+}
