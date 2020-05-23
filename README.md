@@ -1,1 +1,1 @@
-#PataApp
+This is a location based django app that utilizes the GeoDjango toolkit to display nearest located shops given a given location. I learnt how to install and use spatial libraries(PostGIS) and GDAL and GEOS libraries.
