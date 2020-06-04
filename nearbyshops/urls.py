@@ -15,6 +15,7 @@ Including another URLconf
 """
 from djgeojson.views import GeoJSONLayerView
 from django.conf.urls.static import static
+from django.conf.urls import include
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path
@@ -22,6 +23,7 @@ from shops import views
 from shops.models import Shop
 
 urlpatterns = [
+    path('chat/', include('chat.urls')),
     path('admin/', admin.site.urls),
     path('', views.Home.as_view()),
     path('data.geojson/', GeoJSONLayerView.as_view(model=Shop), name='data'),
