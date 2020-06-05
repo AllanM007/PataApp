@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'leaflet',
     'shops',
     'chat',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -144,6 +145,8 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 GDAL_LIBRARY_PATH = environ.get('GDAL_LIBRARY_PATH')
 GEOS_LIBRARY_PATH = environ.get('GEOS_LIBRARY_PATH')

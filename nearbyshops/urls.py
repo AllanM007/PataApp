@@ -19,12 +19,14 @@ from django.conf.urls import include
 from django.conf import settings
 from django.contrib import admin
 from django.urls import path
-from shops import views
 from shops.models import Shop
+from . import views
 
 urlpatterns = [
     path('chat/', include('chat.urls')),
     path('admin/', admin.site.urls),
-    path('', views.Home.as_view()),
+    path('', include('shops.urls')),
+    path('login/', views.log_in, name='login'),
+    path('signup/', views.sign_up, name='signup'),
     path('data.geojson/', GeoJSONLayerView.as_view(model=Shop), name='data'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
