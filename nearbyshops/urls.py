@@ -22,8 +22,10 @@ from django.urls import path
 from shops.models import Shop
 from . import views
 
+app_name = "chat"
+
 urlpatterns = [
-    path('chat/', include('chat.urls')),
+    path('chat/', include(('chat.urls', 'home'), namespace='chat')),
     path('admin/', admin.site.urls),
     path('', include('shops.urls')),
     path('login/', views.log_in, name='login'),
