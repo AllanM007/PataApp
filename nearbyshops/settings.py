@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'djgeojson',
     'leaflet',
     'account',
+    'menu',
     'shops',
     'chat',
     'crispy_forms',
