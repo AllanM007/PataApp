@@ -28,7 +28,7 @@ urlpatterns = [
     path('chat/', include(('chat.urls', 'home'), namespace='chat')),
     path('admin/', admin.site.urls),
     path('', include('shops.urls')),
-    path('login/', views.log_in, name='login'),
-    path('signup/', views.sign_up, name='signup'),
+    path('', include('account.urls')),
+    path('', views.index, name='index'),
     path('data.geojson/', GeoJSONLayerView.as_view(model=Shop), name='data'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

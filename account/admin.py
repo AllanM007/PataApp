@@ -11,6 +11,6 @@ class UserProfileAdmin(admin.ModelAdmin):
 @admin.register( Review)
 class ReviewAdmin(admin.ModelAdmin):
     model = Review
-    list_display = ('contractor', 'rating', 'name', 'body', 'reviewed_on')
+    list_display = ('user', 'rating', 'name', 'body', 'reviewed_on')
     list_filter = ['reviewed_on', 'name']
     search_fields = ['body']

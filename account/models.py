@@ -1,12 +1,10 @@
 from django.core.validators import MaxValueValidator, MinValueValidator 
 from django.contrib.auth.models import User, AbstractUser, AbstractBaseUser
 from django.template.defaultfilters import slugify
-from multiselectfield import MultiSelectField
 from django.utils.text import slugify
 from django.db import models
 from django.contrib.gis.db import models
 from PIL import Image
-import numpy as np
 import uuid
 
 
@@ -56,7 +54,7 @@ class Review(models.Model):
         (5, '5'),
     )
 
-    user = models.ForeignKey(ContractorProfile, on_delete=models.CASCADE, null=True)
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True)
     name = models.CharField(max_length=20, null=True)
     body = models.TextField()
     reviewed_on = models.DateTimeField(auto_now_add=True)

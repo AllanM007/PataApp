@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'djgeojson',
     'leaflet',
+    'account',
     'shops',
     'chat',
     'crispy_forms',
