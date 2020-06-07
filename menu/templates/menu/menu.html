@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pick A Pizza</title>
+</head>
+<body>
+	<form method="POST">
+		{% csrf_token %}
+		<div class="form-group col-4">
+			{{ form }}
+		</div>
+		<button type="submit" class="btn btn-primary">
+			<span class="glyphicon glyphicon-send"></span> Send
+		</button>
+	</form>
+</body>
+</html>

@@ -22,13 +22,16 @@ from django.urls import path
 from shops.models import Shop
 from . import views
 
-app_name = "chat"
+#app_name = "chat"
+#app_name = "menu"
+#app_name = "shops"
 
 urlpatterns = [
     path('chat/', include(('chat.urls', 'home'), namespace='chat')),
     path('admin/', admin.site.urls),
-    path('', include('shops.urls')),
-    path('', include('account.urls')),
+    path('', include(('shops.urls', 'shops'), namespace='shops')),
+    path('', include(('account.urls', 'account'), namespace='account')),
+    path('', include(('menu.urls', 'menu'), namespace='menu')),
     path('', views.index, name='index'),
     path('data.geojson/', GeoJSONLayerView.as_view(model=Shop), name='data'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

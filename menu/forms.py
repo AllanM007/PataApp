@@ -1,4 +1,4 @@
-from django .form import ModelForm
+from django.forms import ModelForm
 from .models import Pizza, Topping, Sauce
 from django.contrib.auth.models import User
 from django import forms
@@ -10,14 +10,14 @@ class PizzaForm(forms.ModelForm):
         fields = ['name']
 
 class ToppingForm(forms.ModelForm):
-    name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
+    #name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
 
     class Meta:
         model = Topping
         fields = ['pizza']
 
 class SauceForm(forms.ModelForm):
-    name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
+    #name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
 
     class Meta:
         model = Sauce
