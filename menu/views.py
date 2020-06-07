@@ -13,3 +13,9 @@ def menu(request):
         'pizzas':pizzas,
     }
 	return render(request, 'menu/menu.html', context)
+
+def pizza(request, pk):
+
+	pizzas = Pizza.objects.all(pk = pk)
+	
+	return render(request, 'menu/pizza.html', context)
