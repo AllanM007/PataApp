@@ -2,7 +2,7 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-	<title>Pick A Pizza</title>
+	<title>Menu</title>
 </head>
 <body>
 	
@@ -15,7 +15,7 @@
 				<div class="card-body">
 					<h5 class="card-title">{{ obj.name }}</h5>
 					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-					<a href="{% url 'menu:pizza'  obj.pk %}" class="btn btn-primary">Go somewhere</a>
+					<a href="{% url 'menu:pizza'  obj.pk %}" class="btn btn-primary">Customize</a>
 				</div>
 			</div>
 			{% endfor %}

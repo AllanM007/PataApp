@@ -16,6 +16,10 @@ def menu(request):
 
 def pizza(request, pk):
 
-	pizzas = Pizza.objects.all(pk = pk)
+	pizza = Pizza.objects.get(pk = pk)
 	
+	context = {
+        'pizza':pizza,
+    }
+
 	return render(request, 'menu/pizza.html', context)
