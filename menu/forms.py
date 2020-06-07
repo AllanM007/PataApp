@@ -10,14 +10,14 @@ class PizzaForm(forms.ModelForm):
         fields = ['name']
 
 class ToppingForm(forms.ModelForm):
-    #name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
+    #name = forms.ChoiceField(choices=TOPPING_CHOICES, widget=forms.RadioSelect())
 
     class Meta:
         model = Topping
         fields = ['pizza']
 
 class SauceForm(forms.ModelForm):
-    #name = forms.ChoiceField(choices=RATING_CHOICES, widget=forms.RadioSelect())
+    #name = forms.ChoiceField(choices=TOPPING_CHOICES, widget=forms.RadioSelect())
 
     class Meta:
         model = Sauce
