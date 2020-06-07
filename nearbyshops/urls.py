@@ -34,4 +34,4 @@ urlpatterns = [
     path('', include(('menu.urls', 'menu'), namespace='menu')),
     path('', views.index, name='index'),
     path('data.geojson/', GeoJSONLayerView.as_view(model=Shop), name='data'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
