@@ -8,8 +8,8 @@ import uuid
 class Pizza(models.Model):
     name = models.CharField(max_length=20, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    topping = models.CharField(max_length=30, blank=True)
-    sauce = models.CharField(max_length=20, blank=True)
+    amount = models.IntegerField(null=True)
+    uuid = models.UUIDField(default=uuid.uuid4, unique=True)
 
     def __str__(self):
         return self.name
