@@ -16,16 +16,7 @@
 	<form method="POST">
 		{% csrf_token %}
 		<div class="form-group col-4">
-			{{ s_form }}
-		</div>
-		<button type="submit" class="btn btn-primary">
-			<span class="glyphicon glyphicon-send"></span> Send
-		</button>
-	</form>
-	<form method="POST">
-		{% csrf_token %}
-		<div class="form-group col-4">
-			{{ t_form }}
+			{{ form }}
 		</div>
 		<button type="submit" class="btn btn-primary">
 			<span class="glyphicon glyphicon-send"></span> Send
