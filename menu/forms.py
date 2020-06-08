@@ -19,10 +19,10 @@ SAUCE_CHOICES = [
     ('Hot Sauce', 'Hot Sauce'),
 ]
 
-class PizzaForm(forms.ModelForm):
+class PizzaForm(forms.Form):
 	topping = forms.ChoiceField(choices=TOPPING_CHOICES, widget=forms.RadioSelect())
 	sauce = forms.ChoiceField(choices=SAUCE_CHOICES, widget=forms.RadioSelect())
 
-	class Meta:
-		model = Pizza
-		fields = ['name']
+	#class Meta:
+	#	model = Pizza
+	#	fields = ['name']
