@@ -8,7 +8,9 @@ import uuid
 class Pizza(models.Model):
     name = models.CharField(max_length=20, blank=True)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-    
+    topping = models.CharField(max_length=30, blank=True)
+    sauce = models.CharField(max_length=20, blank=True)
+
     def __str__(self):
         return self.name
 
@@ -21,26 +23,3 @@ class Pizza(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
-
-
-class Topping(models.Model):
-	pizza = models.ManyToManyField(Pizza)
-	name = models.CharField(max_length=20, null=True)
-	added_on = models.DateTimeField(auto_now_add=True)
-
-	class Meta:
-		ordering = ['added_on']
-
-	def __str__(self):
-		return self.name
-
-class Sauce(models.Model):
-	pizza = models.ManyToManyField(Pizza)
-	name = models.CharField(max_length=20, null=True)
-	added_on = models.DateTimeField(auto_now_add=True)
-
-	class Meta:
-		ordering = ['added_on']
-
-	def __str__(self):
-		return self.name
