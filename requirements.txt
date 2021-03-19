@@ -11,7 +11,7 @@ channels-redis==2.4.2
 constantly==15.1.0
 cryptography==2.9.2
 daphne==2.5.0
-Django==2.2.5
+Django==2.2.18
 django-crispy-forms==1.9.1
 django-geojson==3.0.0
 django-leaflet==0.26.0
